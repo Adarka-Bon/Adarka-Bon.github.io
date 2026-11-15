@@ -210,6 +210,15 @@
   .chart-row .val { font-size: .87rem; color: var(--ink); font-weight: 700; }
   .chart-note { font-size: .82rem; color: var(--dim); margin-top: .7rem; }
 
+  /* ---------- QR ---------- */
+  .qr-row { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap;
+            margin: 1.8rem 0 .4rem; padding: 1.2rem 1.4rem; background: var(--white);
+            border: 1px solid var(--line); border-radius: var(--radius); }
+  .qr { text-align: center; }
+  .qr img { width: 132px; height: 132px; display: block; }
+  .qr figcaption { font-size: .78rem; color: var(--muted); margin-top: .45rem; line-height: 1.3; }
+  .qr-note { flex: 1; min-width: 220px; font-size: .9rem; color: var(--muted); }
+
   /* ---------- ТАЙМЛАЙН ---------- */
   .timeline { position: relative; margin: 1.6rem 0 1rem; padding-left: 2.1rem; }
   .timeline::before { content: ""; position: absolute; left: 11px; top: 10px; bottom: 10px; width: 2px; background: var(--blue-soft); }
@@ -613,6 +622,19 @@
       </div>
     </div>
 
+    <div class="qr-row">
+      <figure class="qr">
+        <img src="qr_site.png" alt="QR-код на сайт">
+        <figcaption>Сайт<br>adarka-bon.github.io</figcaption>
+      </figure>
+      <figure class="qr">
+        <img src="qr_github.png" alt="QR-код на репозиторий">
+        <figcaption>Репозиторий<br>github.com/Adarka-Bon/memory-adaptive-volatility</figcaption>
+      </figure>
+      <p class="qr-note">Отсканируйте код: слева — интерактивный сайт с результатами и
+      демонстрациями, справа — исходный код, данные и результаты всех экспериментов.</p>
+    </div>
+
     <div class="timeline" style="margin-top:1.8rem;">
       <div class="tl-item" data-n="1">
         <h4>Шаг 1. Проверить выводы</h4>
@@ -688,6 +710,7 @@
 </footer>
 
 <script>
+
 
 
 
@@ -864,6 +887,7 @@
       document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
     });
   });
+
 
 
 
